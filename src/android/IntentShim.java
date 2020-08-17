@@ -235,8 +235,8 @@ public class IntentShim extends CordovaPlugin {
 
             callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, getIntentJson(intent)));
 
-            // Remove extra
-            intent.removeExtra("key");
+            // Remove extra text
+            intent.removeExtra("android.intent.extra.TEXT");
 
             return true;
         }

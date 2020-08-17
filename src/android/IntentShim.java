@@ -234,6 +234,10 @@ public class IntentShim extends CordovaPlugin {
             }
 
             callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, getIntentJson(intent)));
+
+            // Remove extra
+            intent.removeExtra("key");
+
             return true;
         }
         else if (action.equals("sendResult"))
